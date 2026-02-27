@@ -1,0 +1,15 @@
+Algorithm 1: Connecting Pairs of Persons
+
+Requirement:
+
+Python3
+
+How to execute:
+
+1. Open terminal in folder with Algorithm1.py
+
+2. Run program with "python3 algorithm1.py"
+
+3. Ensure seating numbers have spaces (Ex. if couples = 6, 4 10 11 5 7 3 9 2 1 0 6 8)
+
+The program will then output the total number of swaps it took
