@@ -1,5 +1,6 @@
 ## CJ Rinaldi & Hector Arevalo
-## Algorithm 1: Greedy Algorithm
+## clayton.rinaldi@csu.fullerton.edu
+## Project 1 Algorithm 1: Greedy Algorithm
 
 n = int(input("Enter number of couples: "))
 
