@@ -38,10 +38,15 @@ The preferred starting city for the sample above is city 4
 '''
 # Define function, takes distance between cities,
 # fuel from each city, and the miles per gallon as its parameters
-def find_starting_city(city_distances, fuel, mpg):
+def find_starting_city():
+    city_distances = [int(x) for x in input("Please enter the distances between cities (example: 5 25 15 10 15):").split()]
+    fuel = [int(x) for x in input("Please enter the amount of gas provided by a city's respective gas station (example: 1 2 1 0 3):").split()]
+
+    i = 0 # Counter
     start_city = 0 # Initializing the 0 to represent beginning of city list
     current_tank = 0 # Current tank at start of loop
     total_surplus = 0 # Tracks the amount of gasoline at each stage of the algorithm
+    mpg = 10 # Miles per Gallon
 
 # Loop that takes the range of the amount of items in the city_distances list
 # and calculates the mileage after fueling as well finding the total gas in total_surplus
@@ -49,7 +54,6 @@ def find_starting_city(city_distances, fuel, mpg):
     for i in range(len(city_distances)):
         mileage = fuel[i] * mpg
         net_mileage = mileage - city_distances[i]
-
         total_surplus += net_mileage # Running total for the amount of net gasoline in the car
         current_tank += net_mileage # Running total for the amount of gas currently in the car
 
@@ -61,14 +65,6 @@ def find_starting_city(city_distances, fuel, mpg):
             start_city = i + 1 # Tracking which city we fail at, we know which cities we iterate through will not
                                # not be able to be used, so we skip the known bad cities to test untested options
     if total_surplus >= 0:
+        print(f"The best starting city is: {start_city}")
         return start_city
 
-# Example inputs fro Project 1 description
-
-city_distances = [5, 25, 15, 10, 15]
-cities = [1, 2, 1, 0, 3]
-mpg = 10
-i = 0
-city_balance = []
-
-find_starting_city(city_distances = city_distances, fuel = cities, mpg = mpg)

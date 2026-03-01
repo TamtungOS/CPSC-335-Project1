@@ -1,0 +1,27 @@
+find_starting_city(city_distances, fuel, mpg)
+    start_city = 0
+    current_tank = 0
+    total_surplus = 0
+    from i to range(length(city_distances))
+        mileage = fuel[i] * miles_per_gallon
+        net_milage = mileage - city_distances[i]
+
+        total_surplus += net_mileage
+        current_tank += net_mileage
+
+        if current_tank < 0
+            current_tank = 0
+            start_city = i + 1
+    if total_surplus >= 0
+        return start_city
+
+Proving efficiency class of 0(n):
+    Using Step Counting:
+        initializing start_city, current_tank, total_surplus = 3 
+        for loop = n + 1
+        total_surplus and current_tank logic = 2n
+        IF statement = n
+        IF statement = n
+        ending IF statement = 1
+        Total steps T(n) = 6n + 4
+            Dropping constants brings us to O(n) time, linear time
