@@ -1,4 +1,4 @@
-# Hector S Mojica Arevalo
+# Hector S Mojica Arevalo & CJ Rinaldi
 # Hector.Mojica@csu.fullerton.edu
 # CPSC 335
 # Project 1
