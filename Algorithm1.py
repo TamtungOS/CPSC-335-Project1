@@ -1,3 +1,6 @@
+## CJ Rinaldi & Hector Arevalo
+## Algorithm 1: Greedy Algorithm
+
 n = int(input("Enter number of couples: "))
 
 arrangement = input("Enter seating arrangement (Ex. 0 2 1 3): ")
